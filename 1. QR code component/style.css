@@ -1,0 +1,117 @@
+/* Outfit font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 15px;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* this page is mobile first, the max-width is 375px */
+
+body{
+  background-color: hsl(212, 46%, 89%);
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.qr-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color:  hsl(0, 0%, 100%);
+    width: 23rem;
+    height: 33.3rem;
+    border-radius: 20px;
+}
+
+.qr-code-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+#qr-code{
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+.qr-container-text{
+    width: 80%;
+    height: 100%;
+    text-align: center;
+}
+
+.qr-container-title{
+    margin: 4% 0;
+    color: hsl(218, 44%, 22%);
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.qr-container-paragraph{
+    color: hsl(220, 15%, 55%);
+    
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    align-self: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* media querie for laptop ver. */
+
+@media screen and (min-width: 1024px){
+    .qr-container{
+        width: 20.3rem;
+        height: 31rem;
+    }
+
+    .qr-container-text{
+        width: 85%;
+    }
+    .qr-container-title{
+        margin: -1% 0 4% 0;
+        font-size: 1.45rem;
+    }
+}
+
+/* media querie for large desktop/laptop */
+
+@media screen and (min-width: 1440px){
+    .qr-container{
+        height: 34rem;
+        width: 22.3rem;
+    }
+
+    .qr-container-title{
+        font-size: 1.5rem;
+        margin: 3% 0 5% 0;
+    }
+
+    .qr-container-paragraph{
+        width: 88.5%;
+        margin: 0 auto;
+    }
+
+
+}
