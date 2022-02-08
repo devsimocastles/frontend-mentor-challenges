@@ -1,1 +1,1 @@
-### Here I'll upload all my frontend mentor practices!
+### Here I'll upload all my frontend mentor challenges solutions!
