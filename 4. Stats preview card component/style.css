@@ -123,9 +123,10 @@ ul.stats li{
 
 .img{
   height: 100%;
+  width: auto;
+  
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-
   filter: invert(0.255) sepia(1) hue-rotate(244deg) saturate(200%) brightness(60%) contrast(1.2);
 }
 
