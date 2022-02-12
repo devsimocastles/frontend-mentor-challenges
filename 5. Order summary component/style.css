@@ -1,0 +1,175 @@
+/* 
+  ==========
+  font import (Red Hat Display)
+  ==========
+*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* 
+  ==========
+  global reset
+  ==========
+*/
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========
+   Main content (BG, box alignment, etc)
+   ========
+*/
+
+.container{
+  height: 100vh; 
+  background-color:  hsl(225, 100%, 94%);
+  
+  background-image: url(images/pattern-background-desktop.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 40vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========
+    card
+   =========
+*/
+
+.card{
+  background-color: hsl(0, 100%, 99%);
+  border-radius: 20px;
+  box-shadow: 0px 5px 25px hsla(223, 47%, 23%, 0.185);
+
+  height: 35rem;
+  width: 25rem;
+
+  flex-shrink: 0;
+}
+
+.card-img{
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-content{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  font-family: 'Red Hat Display', sans-serif;
+
+  height: 60%;
+}
+
+.title{
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.main-paragraph{
+  color: hsl(224, 23%, 55%);
+  text-align: center;
+  line-height: 1.75;
+  width: 85%;
+}
+
+.price{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: hsla(225, 100%, 94%, 0.267);
+  width: 80%;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.price div p{
+  transform: translateX(-25%);
+}
+
+.annual-plan{
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+}
+
+.plan-price{
+  color: hsl(224, 23%, 55%);
+}
+
+a.change-cta{
+  color: hsl(245, 75%, 52%);
+  font-weight: 900;
+  font-size: 15px;
+}
+
+button.buy-button{
+  background-color: hsl(245, 75%, 52%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 7px 17px hsla(223, 47%, 23%, 0.267);
+
+  color: hsl(225, 100%, 98%);
+  font-weight: 900;
+  
+  width: 80%;
+  padding: 15px 0;
+}
+
+a.cancel-order-cta{
+  font-weight: 700;
+  color:  hsl(224, 23%, 55%);
+  text-decoration: none;
+}
+
+/* ===========
+   active states 
+   ===========
+*/
+
+a.change-cta:hover{
+  color: hsl(224, 23%, 55%);
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.buy-button:hover{
+  background-color: hsl(224, 23%, 55%); 
+  cursor: pointer;
+  transition: background-color .5s ease;
+}
+
+.cancel-order-cta:hover{
+   color: hsl(223, 47%, 23%);
+   transition: color .3s;
+}
+
+/* 
+  ==========
+  media queries
+  ==========
+*/
+
+/* for phone, phablet */
+@media screen and (max-width: 575px){
+   .container{
+    background-size: 100% 20vh;
+   }
+  
+  .card{
+     width: 20rem;
+   }
+
+   .card-content{
+     height: 70%;
+   }
+}
