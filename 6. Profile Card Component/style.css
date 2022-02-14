@@ -1,0 +1,160 @@
+/* 
+  =============
+  font import  (Kumbh Sans 400 & 700)
+  =============
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* =======
+   global reset
+   =======
+*/
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+ ==========
+ Main styles
+ ==========
+*/
+
+html{
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+.container{
+    background-color: hsl(185, 75%, 39%);
+    height: 100vh;
+    background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: -51% 180%, 170% -80%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+/* 
+ ==========
+   card
+ ==========
+*/
+
+.card{
+    background-color: rgb(243, 243, 243);
+    border-radius: 20px;
+    box-shadow: 0px 15px 50px hsla(229, 23%, 23%, 0.459);
+
+    width: 21.875rem;
+    height: 26rem;
+
+}
+
+.header{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-content{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-evenly;
+
+    text-align: center;  
+    margin-top: 19%;
+}
+
+#profile-pic{
+    height: 6rem;
+    width: 6rem;
+
+    border-radius: 50%;
+    border: 3px solid rgb(243, 243, 243);
+
+    position: absolute;
+    bottom: 53%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.profile-name{
+    color: hsl(229, 23%, 23%);
+    font-size: 18px;
+}
+
+.age{
+    color: hsl(229, 23%, 23%);
+    font-weight: 400;
+}
+
+.location{
+    color: hsl(229, 23%, 23%);
+    margin: 3% 0;
+}
+
+.profile-stats{
+    border-top: thin solid  hsla(0, 0%, 59%, 0.315);
+    list-style: none;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    width: 100%;
+    margin-top: 10%;
+    padding-top: 7%;
+
+}
+
+.profile-stats p{
+   color: hsl(229, 23%, 23%);
+   letter-spacing: 1px;
+   font-size: 12px;
+   margin-top: 15%;
+}
+
+.profile-stats .stats-header{
+    color: hsl(229, 23%, 23%);
+    font-size: 18px;
+}
+
+/* 
+  ========
+  media queries
+  ========
+ 
+*/
+
+/* phone/phablet */
+@media screen and (max-width:575px){
+    .container{
+        background-position: 120% 180%, -5% -110%;
+    }
+    
+    .card{
+        width: 20rem;
+    }
+
+    .header{
+        width: 20rem;
+    }
+
+    .card-content{
+        margin-top: 25%;
+    }
+}
+
+
+/* desktop, large laptop */
+@media screen and (min-width: 1440px){
+    .container{
+        background-position: -51% 190%, 150% -80%;
+    }
+}
