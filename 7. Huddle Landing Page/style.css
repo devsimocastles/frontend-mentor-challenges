@@ -1,0 +1,262 @@
+/* =========
+  font import
+  ==========
+*/
+
+/* Poppins 400 & 600 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Open Sans 400*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* ========
+  global reset
+  =========
+*/
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* this webpage is mobile first */
+
+/* ===================
+   main container styles 
+   ===================
+*/
+
+html{
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    height: max-content;
+}
+
+.container{
+    background-image: url(images/bg-mobile.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto 100vw;
+    background-color: hsl(257, 40%, 49%);
+
+}
+
+/* ===============
+    header styles
+   ==============
+*/
+
+.header{  
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-evenly;
+
+}
+
+.logo-container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.logo{
+    align-self: flex-start;
+
+    height: 8rem;
+    width: 8rem;
+}
+
+.hero-img-container{
+   display: flex;
+   justify-content: center;
+
+   margin-bottom: 3rem;
+}
+
+.hero-img{
+    width: 10rem;
+    height: auto;
+}
+
+.hero-txt-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 23rem;
+}
+
+.title{
+    color: rgb(252, 239, 220);
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-paragraph{
+    color:  rgb(252, 239, 220);
+    text-align: center;
+
+    line-height: 1.5;
+    word-spacing: 1px;
+    
+    width: 80%;
+    margin: 0 auto;
+}
+
+.cta-container{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.register-cta{
+    text-align: center;
+    text-decoration: none;
+
+    color: hsl(257, 40%, 49%);
+    background-color: rgb(252, 239, 220);
+    box-shadow: 0px 8px 10px hsl(257, 32%, 36%);
+    border-radius: 50px;
+
+    display: inline-block;
+    padding: 1rem 7rem;
+}
+
+/* =========
+   active states
+   ========
+*/
+
+.register-cta:hover{
+    transition: .3s;
+    color: rgb(252, 239, 220);
+    background-color: hsl(300, 69%, 71%);
+}
+
+.icon:hover{
+    transition: .3s;
+    color: hsl(300, 69%, 71%);
+    border: 2px solid hsl(300, 69%, 71%);
+}
+
+/* 
+  =========
+  social media
+  =========
+
+*/
+
+.social-media{
+    height: 10rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.icon{
+    color: rgb(252, 239, 220);
+    border: 2px solid rgb(252, 239, 220);
+    border-radius: 50%;
+
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0 .75rem;
+    padding: .75rem;
+}
+
+/* =============
+    media queries
+   =============
+*/
+
+/* for tablet */
+@media screen and (min-width:724px){
+    .logo-container{
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        width: 60%;
+    }
+    
+    .logo{
+        height: auto;
+        width: 15rem;
+        
+    }
+    
+    .hero-img{
+        width: 35rem;
+        height: auto;
+    }
+}
+
+/* for laptop/desktop */
+@media screen and (min-width:1024px){
+    .container{
+        background-image: url(images/bg-desktop.svg);
+        background-position: center left;
+        background-color: hsl(257, 40%, 49%);
+    }
+
+    .header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 7rem 3fr 1fr;
+        grid-template-areas: 
+        "logo   logo"
+        "img    txt"
+        "social social"
+        ;
+    }
+
+    .logo-container{
+        grid-area: logo;
+        align-self: center;
+
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 2rem;
+    }
+
+    .logo{
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .hero-img{
+        width: 40rem;
+        grid-area: img;
+        justify-self: center;
+    }
+
+    .hero-txt-container{
+        grid-area: txt;
+        height: 80%;
+    }
+
+    .title{
+        text-align: left;
+        font-size: 2.5rem;
+    }
+
+    .main-paragraph{
+        text-align: left;
+    }
+
+    .cta-container{
+        text-align: left;
+    }
+
+    .social-media{
+        grid-area: social;
+        justify-self: right;
+        align-self: center;
+        margin-right: 2rem;
+    }
+}
