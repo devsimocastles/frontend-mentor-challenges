@@ -1,0 +1,235 @@
+/* 
+ ============
+  font import
+ ============
+
+*/
+
+/* Karla */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+
+/* 
+  ===============
+    global reset
+  ===============
+*/
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===========
+    main styles
+   ===========
+*/
+
+html{
+    font-family: "Karla", sans-serif;
+}
+
+body{
+    background-color: hsl(204, 43%, 93%);
+}
+
+.container{
+    min-height: 100vh;
+}
+
+/* ===========
+    component
+   ===========
+*/
+
+.component{
+   background-color: rgb(255, 252, 248);
+   box-shadow: 0px 5px 24px hsla(179, 72%, 24%, 0.266);
+   border-radius: 5px;
+
+   width: 20rem;
+   margin: 1rem auto;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-container{
+    width: 85%;
+    height: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* ===========
+   sections
+   ===========
+*/
+
+/* first section */
+.first{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 18rem;
+}
+
+.main-title{
+    color: hsl(179, 62%, 43%);
+}
+
+.guarantee-paragraph{
+    color: hsl(71, 73%, 54%);
+}
+
+.description{
+    color: hsl(218, 22%, 67%);
+    line-height: 1.5;
+}
+
+
+/* second section */
+
+.second{
+    background-color: hsl(179, 62%, 43%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 15rem;
+}
+
+#subscription-text-contianer{
+    height: 50%;
+}
+
+.subscription-title{
+    color: rgb(255, 252, 248);
+}
+
+.subscription-price{
+    color: rgb(255, 252, 248);
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+}
+
+span.per-month{
+    color: hsla(218, 44%, 93%, 0.568);
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.subscription-paragraph{
+    color: hsl(218, 43%, 93%);
+}
+
+.cta-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40%;
+}
+
+.sign-up-cta{
+    background-color: hsl(71, 73%, 54%);
+    box-shadow: 0px 5px 20px hsla(179, 72%, 24%, 0.466);
+    border-radius: 5px;
+    color: hsl(218, 43%, 93%);
+
+    text-decoration: none;
+    padding: 1rem 6rem;
+}
+
+/* third section */
+
+.third{
+    background-color: hsl(179, 47%, 52%);
+    
+    height: 18rem;
+}
+
+.why-us-title{
+    color: hsl(218, 43%, 93%);
+}
+
+.why-us-paragraph{
+    color: hsla(218, 44%, 93%, 0.76);
+}
+
+/* ================
+   media queries
+   ================
+*/
+
+/* for laptop and desktop */
+@media only screen and (min-width:1024px){
+    .component{
+        width: 45rem;
+        height: 18rem;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "first  first"
+        "second third";
+    }
+
+    .section{
+        height: 17rem;
+    }
+
+    .first{
+        grid-area: first;
+    }
+
+    .second{
+        grid-area: second;
+    }
+
+    #subscription-text-container{
+        height: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .cta-container{
+        height: 15%;
+    }
+
+    .third{
+        grid-area: third;
+    }
+
+    #third-text-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .why-us-title{
+        height: 15%;
+    }
+
+    .why-us-paragraph{
+        height: 55%;
+    }
+
+
+    
+}
+
