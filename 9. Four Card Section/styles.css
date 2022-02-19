@@ -1,0 +1,179 @@
+/* ===========
+    font import
+   ===========
+*/
+
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* 
+   ==========
+   global reset
+   ==========
+*/
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+/* ==========
+   main styles
+   ==========
+*/
+
+html{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+
+.header{
+    width: 90%;
+    margin: 4rem auto;
+}
+
+.title-span{
+    font-weight: 200;
+    display: block;
+}
+
+.title{
+    color: hsl(234, 12%, 34%);
+
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.main-paragraph{
+    color: hsl(229, 6%, 66%);
+
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.section-container{
+    width: 22rem;
+    margin: 0 auto;
+}
+
+.card{
+    box-shadow: 0px 6px 15px hsla(229, 6%, 66%, 0.541);
+    border-radius: 7px;
+
+    margin-bottom: 3rem;
+    height: 15rem;
+}
+
+.card-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+     
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+}
+
+.card-svg-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40%;
+}
+
+.svg{
+    height: 4rem;
+    width: 4rem;
+    margin-right: 2rem;
+}
+
+.card-title{
+   color: hsl(234, 12%, 34%);
+}
+
+.card-paragraph{
+   color: hsl(229, 6%, 66%);
+}
+
+#first-card{
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+#second-card{
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+#third-card{
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+#fourth-card{
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+/* ===========
+   media queries
+   ===========
+*/
+
+/* for laptop and desktop */
+@media screen and (min-width:1024px){
+    body{
+        background-color: hsl(0, 0%, 98%);
+    }
+
+    .section-container{
+        display: grid;
+        place-items: center;
+        place-content: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        ".   one  ."
+        "two one three"
+        "two four three"
+        ".   four .";
+
+        width: 100%;
+    }
+
+    .card{
+        width: 25rem;
+        height: 17rem;
+        
+    }
+
+    .title{
+        font-size: 2rem;
+    }
+
+    .main-paragraph{
+        width: 45%;
+        margin: 1rem auto;
+    }
+
+     #first-card{
+       grid-area: two;
+     }
+     
+     #second-card{
+       grid-area: one;
+     }
+     
+     #third-card{
+       grid-area: four;
+     }
+     
+     #fourth-card{
+       grid-area: three;
+     }
+
+}
+
+
+
